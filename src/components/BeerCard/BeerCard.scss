@@ -1,18 +1,38 @@
+.beerCards {
+  height: 160vh;
+  width: 80vw;
+}
+
+.beer-tiles {
+  margin-top: 20px;
+  display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 50px 20px; 
+    height: 60vh;
+    
+}
+
+img {
+  height: 200px;
+  width: auto;
+}
+
 .beer-tile {
   margin-bottom: 20px;
-  height: 70vh;
   background-color:white;
   border: black 1px solid;
   border-radius: 10px;
   padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   text-align: center;
   -webkit-box-shadow: 7px 5px 15px 5px #000000; 
   box-shadow: 7px 5px 15px 5px #000000;
 
+  
   &__main {
     background-color: white;
   }
@@ -20,20 +40,9 @@
   &__tagline {
     font-style: oblique;
   }
-  &__descriptionHeader {
-    margin-bottom: 20px;
-  }
+
   &__description {
     margin-top: 0px;
   }
 }
 
-.beerCards {
-  margin-top: 50px;
-  display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 50px 20px; 
-    height: 60vh;
-    
-}
