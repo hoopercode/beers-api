@@ -1,0 +1,33 @@
+.sideNav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sideNav a {
+  padding: 20px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sideNav input {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  width: 60%;
+  font-size: 20px;
+  color: #818181;
+  margin-left: 16px;
+  display: block;
+}
+
+.sideNav a:hover {
+  color: #f1f1f1;
+}
