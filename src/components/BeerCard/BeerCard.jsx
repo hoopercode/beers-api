@@ -13,10 +13,10 @@ const BeerCard = (props) => {
       const description = beer.description
 
       return (
-      <div className="beer-tile">
+      <div key={name + index} className="beer-tile">
         <h3>{name}</h3>
       <img className="beer-tiles__img" src={image} alt={name}></img>
-      <h4 className="beer-tile__tagline">{tagline}</h4>
+      <h4 className="beer-tile__tagline">"{tagline}"</h4>
       <h5 className="beer-tile__description">{description}</h5>
       </div>
       )

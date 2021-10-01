@@ -10,13 +10,15 @@
     grid-template-rows: 1fr 1fr 1fr; 
     gap: 50px 20px; 
     height: 60vh;
+
+    &__img {
+      height: 200px;
+      width: auto;
+    }  
     
 }
 
-img {
-  height: 200px;
-  width: auto;
-}
+
 
 .beer-tile {
   margin-bottom: 20px;
