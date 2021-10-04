@@ -1,17 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./SearchBar.scss"
 
 
-const SearchBar = () => { 
+const SearchBar = (props) => { 
 
-const getData = (text) => {
-  console.log(text.target.value)
-}
+const { placeholder, handleInput, searchTerm } = props;
+
+  
+  
+
     return (
-
-      <input id="searchBar "type="text" placeholder="Search" onChange={getData} />
+     <form className="search">
+        <input type="text" value={searchTerm} placeholder={placeholder} onChange={handleInput} />
+    </form>
     
     )
+
   }
 
 

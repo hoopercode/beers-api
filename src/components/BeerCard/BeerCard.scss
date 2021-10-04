@@ -1,15 +1,20 @@
+@use "../../assets/SASS/variables" as *;
+
+
 .beerCards {
-  height: 160vh;
+  height: auto;
   width: 80vw;
 }
 
 .beer-tiles {
+  margin-left: 200px;
   margin-top: 20px;
   display: grid; 
     grid-template-columns: 1fr 1fr 1fr; 
     grid-template-rows: 1fr 1fr 1fr; 
     gap: 50px 20px; 
     height: 60vh;
+    // width: 60vw;
 
     &__img {
       height: 200px;
@@ -21,6 +26,7 @@
 
 
 .beer-tile {
+  width: 300px;
   margin-bottom: 20px;
   background-color:white;
   border: black 1px solid;
@@ -41,6 +47,7 @@
 
   &__tagline {
     font-style: oblique;
+    color: $color-dark;
   }
 
   &__description {

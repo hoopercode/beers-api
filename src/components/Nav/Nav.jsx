@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Nav.scss"
 import SearchBar from '../SearchBar/SearchBar';
+import BeerFilter from '../BeerFilter/BeerFilter';
 
-  const Nav = () => {
+
+  const Nav = (props) => {
+    const {placeholder, searchTerm, handleInput, handleClick, Acidic, HighABV, ClassicRange} = props
+
     return (
+
+
     
     <nav className="sideNav">
-      <SearchBar />
-      <a href="#about">High ABV &#40;&#60;6.0%&#41;</a>
-      <a href="#services">Classic Range</a>
-      <a href="#clients">Acidic &#40;ph&#60;4&#41;</a>
+      <SearchBar placeholder={placeholder} searchTerm={searchTerm} handleInput={handleInput}/>
+      <BeerFilter handleClick={handleClick} HighABV={HighABV} ClassicRange={ClassicRange} Acidic={Acidic}/>
     </nav>
 
     )
