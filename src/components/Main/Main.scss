@@ -13,10 +13,15 @@ main {
   main {
     background-image: url("../../assets/images/alexandre-brondino-thFMGJ5uWVo-unsplash\ \(1\).jpg");
     background-repeat: repeat-y;
-    height: 1200px;
+    height: 18000px;
     display:flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .brewDogLogo {
+    margin-left: 180px;
   }
   
   }
