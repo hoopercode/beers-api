@@ -1,10 +1,24 @@
-.app {
+@media screen and (max-width: 480px) {
+
+
+// .app {
   
-  margin-left: 200px;
-  margin-right: 20px;
+//   // margin-left: 200px;
+//   // margin-right: 20px;
   
   
+// }
+
 }
 
+@media screen and (min-width: 480px) {
 
+
+  .app {
+    margin-right: 20px;
+    
+    
+  }
+  
+  }
 

@@ -1,8 +1,22 @@
-
+@media screen and (max-width: 480px) {
 main {
   background-image: url("../../assets/images/alexandre-brondino-thFMGJ5uWVo-unsplash\ \(1\).jpg");
-  height: 1200px;
+  height: 300vh;
   display:flex;
   justify-content: space-around;
   align-items: flex-start;
 }
+
+}
+
+@media screen and (min-width: 480px) {
+  main {
+    background-image: url("../../assets/images/alexandre-brondino-thFMGJ5uWVo-unsplash\ \(1\).jpg");
+    background-repeat: repeat-y;
+    height: 1200px;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  }

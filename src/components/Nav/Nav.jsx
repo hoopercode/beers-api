@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import "./Nav.scss"
 import SearchBar from '../SearchBar/SearchBar';
-import BeerFilter from '../BeerFilter/BeerFilter';
+import cross from "../../assets/images/black-cross.png"
+import hamburger from "../../assets/images/menu-icon.png"
 
 
   const Nav = (props) => {
-    const {placeholder, searchTerm, handleInput, handleClick, Acidic, HighABV, ClassicRange} = props
+    const {placeholder, searchTerm, handleInput} = props
 
     return (
 
@@ -13,7 +14,8 @@ import BeerFilter from '../BeerFilter/BeerFilter';
     
     <nav className="sideNav">
       <SearchBar placeholder={placeholder} searchTerm={searchTerm} handleInput={handleInput}/>
-      <BeerFilter handleClick={handleClick} HighABV={HighABV} ClassicRange={ClassicRange} Acidic={Acidic}/>
+      <img className="menu-cross"src={cross} alt="cross" />
+      <img className="hamburger"src={hamburger} alt="menu" />
     </nav>
 
     )
