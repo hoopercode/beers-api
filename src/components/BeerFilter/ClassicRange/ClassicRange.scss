@@ -1,3 +1,14 @@
 p {
+  color: grey;
+  cursor: pointer;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  font-size: 20px;
+  margin-left: 15px;
+  
+}
+
+p:hover {
   color: white;
+  text-decoration: underline;
 }

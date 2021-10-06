@@ -10,12 +10,9 @@ import HighABV from './components/BeerFilter/HighABV/HighABV';
 
 const App = () => {
 const [count, setCount] = useState(0)
-const [link, setLink] = useState("")
+const [link, setLink] = useState("https://api.punkapi.com/v2/beers?page=2&per_page=80")
 const [searchTerm, setSearchTerm] = useState("")
 const [punk, setPunk] = useState([])
-const [Acidic, setAcidic] = useState([])
-const [HighABV, setHighABV] = useState([])
-const [ClassicRange, setClassicRange] = useState([])
 
 
 
@@ -24,35 +21,14 @@ const [ClassicRange, setClassicRange] = useState([])
 useEffect(() => {
 
   const getPunk = () => {//This function gets all Punk Beers
-    fetch(`https://api.punkapi.com/v2/beers${link}`)
+    fetch(link)
       .then((response) => response.json())
       .then((response) => {setPunk(response)
       console.log(response)});
   }
-  const getAcidic = () => {//This function gets all Acidic Beers
-    //This isn't working
-    fetch("https://api.punkapi.com/v2/beers?ph_gt=4")
-      .then((response) => response.json())
-      .then((response) => setAcidic(response));
-  }
-
-  const getHighABV = () => {//This function gets all High ABV  Beers
-    fetch("https://api.punkapi.com/v2/beers?abv_gt=6")
-      .then((response) => response.json())
-      .then((response) => setHighABV(response));
-  }
-
-  const getClassicRange = () => {//This function gets all beers before 2010
-    fetch("https://api.punkapi.com/v2/beers?brewed_before=01-2010")
-    .then((response) => response.json())
-    .then((response) => setClassicRange(response));
-  }
 
   
 getPunk()
-getAcidic()
-getHighABV()
-getClassicRange()
 
 },[link])
 
@@ -65,20 +41,25 @@ const filteredBeers = punk.filter(beer => {
   });
 
 
-//Functions to handle clicking the Nav words - Not currently working
+//Functions to handle clicking the Nav words
 const handleHighABV = () => {
- setLink("?abv_gt=6")
+ setLink("https://api.punkapi.com/v2/beers?abv_gt=6")
 }
 
 const handleClassicRange = () => {
-  setLink("?brewed_before=01-2010")
+  setLink("https://api.punkapi.com/v2/beers?brewed_before=01-2010")
   
 }
-
+//Not working yet
 const handleAcidic= () => {
+
+  link.map()
   setLink("https://api.punkapi.com/v2/beers?ph_gt=4")
 }
 
+const handleAllBeers = () => {
+  setLink("https://api.punkapi.com/v2/beers?page=2&per_page=80")
+}
 
 
 //Getting search input, turning it to lower case and then setting Search Term as the lower case version.
@@ -94,7 +75,7 @@ return (
 <div className="app">
 
   <header>
-    <Nav placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} handleAcidicClick={handleAcidic} handleClassicRangeClick={handleClassicRange}handleHighABVClick={handleHighABV}/>
+    <Nav placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} handleAcidicClick={handleAcidic} handleClassicRangeClick={handleClassicRange}handleHighABVClick={handleHighABV} handleAllBeersClick={handleAllBeers}/>
   </header>
     <Main beersArr={filteredBeers}/>
 </div>
