@@ -13,6 +13,7 @@ const BeerCard = (props) => {
       const image = beer.image_url
       const tagline = beer.tagline
       const description = beer.description
+      const food = beer.food_pairing
 
       return (
         <div className="flip-card beer-tile" key={name + index}>
@@ -24,7 +25,14 @@ const BeerCard = (props) => {
           </div>
           <div className="flip-card-back">
           <h3>{name}</h3>
+          <div className="beer-tile__description">
+          <h4 className="beer-tile__heading">Description</h4>
           <h5 className="beer-tile__description">{description}</h5>
+          </div>
+          <div className="beer-tile__description">
+          <h4 className="beer-tile__heading">Food Pairings</h4>
+          <h5 className="beer-tile__food">{food}</h5>
+          </div>
           </div>
         </div>
       </div>
