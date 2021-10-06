@@ -23,8 +23,7 @@ useEffect(() => {
   const getPunk = () => {//This function gets all Punk Beers
     fetch(link)
       .then((response) => response.json())
-      .then((response) => {setPunk(response)
-      console.log(response)});
+      .then((response) => {setPunk(response)});
   }
 
   
@@ -53,9 +52,8 @@ const handleClassicRange = () => {
 //Not working yet
 const handleAcidic= () => {
 
-  link.map()
-  setLink("https://api.punkapi.com/v2/beers?ph_gt=4")
-}
+setLink("https://api.punkapi.com/v2/beers?filter=greaterThan('ph','6.0')?filter=not(equals(ph,'null'))")
+  }
 
 const handleAllBeers = () => {
   setLink("https://api.punkapi.com/v2/beers?page=2&per_page=80")
