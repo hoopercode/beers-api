@@ -5,12 +5,12 @@ import ClassicRange from './ClassicRange/ClassicRange'
 import Acidic from './Acidic/Acidic'
 
 function BeerFilter(props) {
-  const {handleClick, filterAcidic, filterClassic, filterHighABV} = props
+  const {handleHighABVClick, handleAcidicClick, handleClassicRangeClick} = props
   return (
     <>
-      <HighABV handleClick={handleClick} filterHighABV={filterHighABV}/>
-      <ClassicRange handleClick={handleClick} filterClassic={filterClassic}/>
-      <Acidic handleClick={handleClick} filterAcidic={filterAcidic}/>
+      <HighABV handleHighABVClick={handleHighABVClick} f/>
+      <ClassicRange handleClassicRangeClick={handleClassicRangeClick}/>
+      <Acidic handleAcidicClick={handleAcidicClick}/>
     </>
   )
 }

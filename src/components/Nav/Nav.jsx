@@ -7,7 +7,7 @@ import BeerFilter from '../BeerFilter/BeerFilter';
 
 
   const Nav = (props) => {
-    const {placeholder, searchTerm, handleInput, handleClick, filterClassic, filterHighABV, filterAcidic} = props
+    const {placeholder, searchTerm, handleInput, handleHighABVClick, handleClassicRangeClick, handleAcidicClick} = props
 
     return (
 
@@ -15,7 +15,7 @@ import BeerFilter from '../BeerFilter/BeerFilter';
     
     <nav className="sideNav">
       <SearchBar placeholder={placeholder} searchTerm={searchTerm} handleInput={handleInput}/>
-      <BeerFilter handleClick={handleClick} filterHighABV={filterHighABV} filterClassic={filterClassic} filterAcidic={filterAcidic}/>
+      <BeerFilter handleAcidicClick={handleAcidicClick} handleClassicRangeClick={handleClassicRangeClick} handleHighABVClick={handleHighABVClick}/>
       <img className="menu-cross"src={cross} alt="cross" />
       <img className="hamburger"src={hamburger} alt="menu" />
     </nav>

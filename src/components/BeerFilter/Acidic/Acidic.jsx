@@ -2,10 +2,10 @@ import React from 'react'
 import "./Acidic.scss"
 function Acidic(props) {
 
-  const {handleClick, selection, filterAcidic} = props
+  const {handleAcidicClick, selection, filterAcidic} = props
   return (
     <>
-       <a href ="#about" onClick={handleClick} value={filterAcidic} selection={selection}>Acidic</a>
+       <a href ="" onClick={handleAcidicClick} value={filterAcidic} selection={selection}>Acidic</a>
     </>
   )
 }
