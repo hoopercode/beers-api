@@ -1,3 +1,22 @@
-p {
-  color: white;
+@use "../../../assets/SASS/variables" as *;
+
+
+.nav__HighABV {
+  color: grey;
+  cursor: pointer;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  font-size: 20px;
+  margin-left: 17px;
+  
+}
+
+.nav__HighABV:hover {
+  color: black;
+  text-decoration: underline;
+}
+.nav__HighABV {
+  font-family: $font-header-solid;
+  font-size: 25px;
+  font-weight: 900;
 }

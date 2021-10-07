@@ -1,3 +1,6 @@
+@use "../../assets/SASS/variables" as *;
+
+
 @media screen and (max-width: 480px) {
 
 .sideNav {
@@ -56,27 +59,18 @@
     padding-top: 20px;
   }
   
-  .sideNav a {
-    padding: 20px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-  }
   
-  .sideNav input {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    width: 60%;
-    font-size: 20px;
-    color: #818181;
-    margin-left: 16px;
-    display: block;
-  }
+    .sideNav input {
+      border: 2px solid black;
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      width: 60%;
+      font-size: 20px;
+      color: #818181;
+      margin-left: 16px;
+      display: block;
+    }
   
-  .sideNav a:hover {
-    color: #f1f1f1;
-  }
 
   .hamburger {
     display:none

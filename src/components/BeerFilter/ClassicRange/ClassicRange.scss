@@ -1,14 +1,22 @@
-p {
+@use "../../../assets/SASS/variables" as *;
+
+
+.nav__ClassicRange {
   color: grey;
   cursor: pointer;
   -webkit-transition: color 1s;
   transition: color 1s;
   font-size: 20px;
-  margin-left: 15px;
+  margin-left: 17px;
   
 }
 
-p:hover {
-  color: white;
+.nav__ClassicRange:hover {
+  color: black;
   text-decoration: underline;
+}
+.nav__ClassicRange {
+  font-family: $font-header-solid;
+  font-size: 25px;
+  font-weight: 900;
 }

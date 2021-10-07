@@ -5,7 +5,7 @@ function Acidic(props) {
   const {handleAcidicClick, selection, filterAcidic} = props
   return (
     <>
-       <p onClick={handleAcidicClick} value={filterAcidic} selection={selection}>Acidic</p>
+       <p className="nav__Acidic"onClick={handleAcidicClick} value={filterAcidic} selection={selection}>Acidic</p>
     </>
   )
 }

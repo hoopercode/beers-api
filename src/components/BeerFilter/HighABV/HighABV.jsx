@@ -7,7 +7,7 @@ function HighABV(props) {
 
   return (
     <>
-      <p onClick={handleHighABVClick} value={filterHighABV} selection={selection}>High ABV &#40;&#60;6.0%&#41;</p>
+      <p className="nav__HighABV" onClick={handleHighABVClick} value={filterHighABV} selection={selection}>High ABV &#40;&#60;6.0%&#41;</p>
     </>
   )
 }
