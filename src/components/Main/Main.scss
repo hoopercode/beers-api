@@ -4,7 +4,9 @@
 @media screen and (max-width: 480px) {
 main {
   background-image: url("../../assets/images/alexandre-brondino-thFMGJ5uWVo-unsplash\ \(1\).jpg");
-  height: 300vh;
+  background-repeat: repeat-y;
+  height: (1000vh)px;
+  
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -19,6 +21,10 @@ main {
 }
 
 }
+
+// .mobile__sideNav {
+//  display: inline-block;
+// }
 
 @media screen and (min-width: 480px) {
   main {
@@ -35,4 +41,8 @@ main {
     margin-left: 180px;
   }
   
+  }
+
+  .mobile__sideNav {
+    display: none;
   }

@@ -18,10 +18,12 @@ import Main from './components/Main/Main';
 const App = () => {
   
 
-const [link, setLink] = useState("")
+const [link, setLink] = useState("?page=2&per_page=80")
 const [searchTerm, setSearchTerm] = useState("")
 const [punk, setPunk] = useState([])
 const [acidic, setAcidic] =useState([])
+const [highABV, setHighABV] =useState([])
+const [classicRange, setClassicRange] = useState([])
 
 useEffect(() => {
 
@@ -32,12 +34,27 @@ useEffect(() => {
        }
 
   const getAcidic = () => {//This function gets all Punk Beers
-        fetch(`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
+        fetch(`https://api.punkapi.com/v2/beers?page=1&per_page=80`)
           .then((response) => response.json())
           .then((response) => {setAcidic(response)});
-           }
-    getAcidic()   
+            }
+
+  const getHighABV = () => {//This function gets all Punk Beers
+        fetch(`https://api.punkapi.com/v2/beers?abv_gt=6`)
+          .then((response) => response.json())
+          .then((response) => {setHighABV(response)});
+                  }
+  const getClassicRange = () => {//This function gets all Punk Beers
+        fetch(`https://api.punkapi.com/v2/beers?brewed_before=01-2010`)
+          .then((response) => response.json())
+          .then((response) => {setClassicRange(response)});
+                  }               
+
+
     getPunk()
+    getAcidic()   
+    getHighABV()
+    getClassicRange()
     setTimeout(function(){}, 3000);
     },[link])
 
@@ -95,10 +112,16 @@ return (
     </header>
     <Switch>
      <Route path="/acidic">
-        <Main beersArr={acidicBeers}/>
+        <Main beersArr={acidicBeers} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
+      </Route>
+      <Route path="/classicRange">
+        <Main beersArr={classicRange} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
+      </Route>
+      <Route path="/highABV">
+        <Main beersArr={highABV} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
       </Route>
       <Route path="/">
-        <Main beersArr={filteredBeers}/>
+        <Main beersArr={filteredBeers} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
       </Route>
     </Switch>
   </div>
