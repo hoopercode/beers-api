@@ -9,18 +9,13 @@ const BeerCard = (props) => {
     const { beersArr } = props;
 
     const beerTilesJSX = beersArr.map((beer, index) => {
-      const name = beer.name;
-      const image = beer.image_url
-      const tagline = beer.tagline
-      const description = beer.description
-      const food = beer.food_pairing
-
+      const {name, image_url, tagline, description} = beer
       return (
         <div className="flip-card beer-tile" key={name + index}>
         <div className="flip-card-inner">
           <div className="flip-card-front">
             <h3 className="beer-tile__header">{name}</h3>
-            <img className="beer-tiles__img" src={image} alt={name}></img>
+            <img className="beer-tiles__img" src={image_url} alt={name}></img>
             <h4 className="beer-tile__tagline">"{tagline}"</h4>
           </div>
           <div className="flip-card-back">
@@ -47,3 +42,4 @@ const BeerCard = (props) => {
 };
 
 export default BeerCard;
+

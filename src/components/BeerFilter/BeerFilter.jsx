@@ -4,15 +4,16 @@ import HighABV from './HighABV/HighABV'
 import ClassicRange from './ClassicRange/ClassicRange'
 import Acidic from './Acidic/Acidic'
 import SeeAllBeers from './SeeAllBeers/SeeAllBeers'
+import { Link } from "react-router-dom";
 
 function BeerFilter(props) {
   const {handleHighABVClick, handleAcidicClick, handleClassicRangeClick, handleAllBeersClick} = props
   return (
     <>
-      <SeeAllBeers handleAllBeersClick={handleAllBeersClick} />
-      <HighABV handleHighABVClick={handleHighABVClick} />
-      <ClassicRange handleClassicRangeClick={handleClassicRangeClick}/>
-      <Acidic handleAcidicClick={handleAcidicClick}/>
+      <Link to="/"><SeeAllBeers handleAllBeersClick={handleAllBeersClick} /></Link>
+      <Link to="/"><HighABV handleHighABVClick={handleHighABVClick} /></Link>
+      <Link to="/"><ClassicRange handleClassicRangeClick={handleClassicRangeClick}/></Link>
+      <Link to="/acidic"><Acidic handleAcidicClick={handleAcidicClick}/></Link>
     </>
   )
 }

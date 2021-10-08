@@ -1,6 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  useLocation,
+  Route
+} from "react-router-dom";
 
 import './App.scss';
+import data from "../src/data/beers"
 
 import Nav from "../src/components/Nav/Nav"
 import Main from './components/Main/Main';
@@ -11,72 +18,91 @@ import Main from './components/Main/Main';
 const App = () => {
   
 
-const [link, setLink] = useState(`https://api.punkapi.com/v2/beers?page=2&per_page=80${searchTerm}`)
+const [link, setLink] = useState("")
 const [searchTerm, setSearchTerm] = useState("")
 const [punk, setPunk] = useState([])
+const [acidic, setAcidic] =useState([])
 
 useEffect(() => {
 
   const getPunk = () => {//This function gets all Punk Beers
-    fetch(link)
+    fetch(`https://api.punkapi.com/v2/beers${link}`)
       .then((response) => response.json())
       .then((response) => {setPunk(response)});
        }
 
+  const getAcidic = () => {//This function gets all Punk Beers
+        fetch(`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
+          .then((response) => response.json())
+          .then((response) => {setAcidic(response)});
+           }
+    getAcidic()   
     getPunk()
     setTimeout(function(){}, 3000);
     },[link])
 
 
-
 //Functions to handle clicking the Nav words
+const handleAllBeers = () => {
+  setLink("?page=2&per_page=80")
+}
+
 const handleHighABV = () => {
- setLink("https://api.punkapi.com/v2/beers?abv_gt=6")
+ setLink("?abv_gt=6")
 }
 
 const handleClassicRange = () => {
-  setLink("https://api.punkapi.com/v2/beers?brewed_before=01-2010")
+  setLink("?brewed_before=01-2010")
   
 }
 //Not working yet
 const handleAcidic= () => {
+ console.log(acidicBeers)
 
-const acidicBeers = filteredBeers.filter(beer => beer.ph < 4)
-console.log(acidicBeers)
-
-return acidicBeers
 }
 
-const handleAllBeers = () => {
-  setLink("https://api.punkapi.com/v2/beers?page=2&per_page=80")
-}
+
 
 //Getting search input, turning it to lower case and then setting Search Term as the lower case version.
 const handleInput = event => {
   const cleanInput = event.target.value.toLowerCase();
   setSearchTerm(cleanInput)
-  
 }
 
 //Mapping over punk to get the beers to lowercase to match with search term below.
-const filteredBeers = punk.filter(beer => {  
+
+  const filteredBeers = punk.filter(beer => {  
   const searchToLower = beer.name.toLowerCase()
 
   return searchToLower.includes(searchTerm)
   
   });
+
+const acidicBeers = acidic.filter(beer => {
+  
+  const acidicBeer = beer.ph < 4
+
+  return acidicBeer
+})
   
 //What we are showing on the page
 return (
+<Router>
+  <div className="app">
 
-<div className="app">
-
-  <header>
-    <Nav placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} handleAcidicClick={handleAcidic} handleClassicRangeClick={handleClassicRange}handleHighABVClick={handleHighABV} handleAllBeersClick={handleAllBeers}/>
-  </header>
-    <Main beersArr={filteredBeers}/>
-</div>
-    
+    <header>
+      <Nav placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} handleAcidicClick={handleAcidic} handleClassicRangeClick={handleClassicRange}handleHighABVClick={handleHighABV} handleAllBeersClick={handleAllBeers}/>
+    </header>
+    <Switch>
+     <Route path="/acidic">
+        <Main beersArr={acidicBeers}/>
+      </Route>
+      <Route path="/">
+        <Main beersArr={filteredBeers}/>
+      </Route>
+    </Switch>
+  </div>
+</Router>
   )
 };
 
