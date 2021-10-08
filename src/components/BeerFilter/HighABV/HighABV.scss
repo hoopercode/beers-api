@@ -1,5 +1,11 @@
 @use "../../../assets/SASS/variables" as *;
+@media screen and (max-width: 480px) {
 
+  .nav__HighABV{
+    display: none;
+  }
+
+}
 
 .nav__HighABV {
   color: grey;

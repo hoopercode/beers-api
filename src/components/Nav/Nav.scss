@@ -4,43 +4,46 @@
 @media screen and (max-width: 480px) {
 
 .sideNav {
-  display: none;
-  height: 100%;
-  width: 200px;
+  // display: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  // background-color: white;
+  // opacity: 0.9;
   overflow-x: hidden;
-  padding-top: 20px;
+  font-size: 10px;
+  // padding-top: 20px;
 }
 
-.sideNav a {
-  display: none;
-  padding: 20px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
 
 .sideNav input {
   display: none;
+  height: 40px;
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  width: 60%;
-  font-size: 20px;
+ 
+  font-size: 10px;
   color: #818181;
   margin-left: 16px;
-  display: block;
+  // display: block;
 }
 
-.sideNav a:hover {
+
+.menu-cross {
   display: none;
-  color: #f1f1f1;
 }
 
+.hamburger {
+  position: relative;
+  top: 5px;
+  right: 10px;
+}
 
 }
 

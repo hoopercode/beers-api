@@ -11,7 +11,7 @@ const { placeholder, handleInput, searchTerm } = props;
 
     return (
      <form className="search">
-        <input type="text" value={searchTerm} placeholder={placeholder} onChange={handleInput} />
+        <input className="nav__input"type="text" value={searchTerm} placeholder={placeholder} onChange={handleInput} />
     </form>
     
     )

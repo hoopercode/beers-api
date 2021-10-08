@@ -7,6 +7,7 @@ function SeeAllBeers(props) {
   return (
     <>
        <p className="nav__SeeAllBeers"onClick={handleAllBeersClick}>All Beers</p>
+       <span className="toolTipText">See the entire range</span>
     </>
   )
 }

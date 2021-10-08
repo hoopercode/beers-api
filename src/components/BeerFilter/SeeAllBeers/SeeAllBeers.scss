@@ -1,7 +1,46 @@
 @use "../../../assets/SASS/variables" as *;
+@media screen and (max-width: 480px) {
+
+  .nav__SeeAllBeers{
+    display: none;
+  }
+
+}
 
 .nav__SeeAllBeers {
+  color: grey;
+  cursor: pointer;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  font-size: 20px;
+  margin-left: 17px;
+  
+}
+
+.nav__SeeAllBeers:hover {
+  color: black;
+  text-decoration: underline;
+}
+.nav__SeeAllBeers{
   font-family: $font-header-solid;
   font-size: 25px;
   font-weight: 900;
+}
+
+.toolTipText {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.toolTipText:hover  {
+  visibility: visible;
 }

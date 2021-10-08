@@ -6,9 +6,16 @@ main {
   background-image: url("../../assets/images/alexandre-brondino-thFMGJ5uWVo-unsplash\ \(1\).jpg");
   height: 300vh;
   display:flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   font-family: $font-header-solid;
+}
+
+.brewDogLogo{
+  margin-top: 60px;
+  width: 200px;
+  height: auto;
 }
 
 }

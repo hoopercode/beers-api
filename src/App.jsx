@@ -4,19 +4,16 @@ import './App.scss';
 
 import Nav from "../src/components/Nav/Nav"
 import Main from './components/Main/Main';
-import HighABV from './components/BeerFilter/HighABV/HighABV';
+
 
 
 
 const App = () => {
-const [count, setCount] = useState(0)
-const [link, setLink] = useState("https://api.punkapi.com/v2/beers?page=2&per_page=80")
+  
+
+const [link, setLink] = useState(`https://api.punkapi.com/v2/beers?page=2&per_page=80${searchTerm}`)
 const [searchTerm, setSearchTerm] = useState("")
 const [punk, setPunk] = useState([])
-
-
-
-
 
 useEffect(() => {
 
@@ -24,20 +21,12 @@ useEffect(() => {
     fetch(link)
       .then((response) => response.json())
       .then((response) => {setPunk(response)});
-  }
+       }
 
-  
-getPunk()
+    getPunk()
+    setTimeout(function(){}, 3000);
+    },[link])
 
-},[link])
-
-//Mapping over punk to get the beers to lowercase to match with search term below.
-const filteredBeers = punk.filter(beer => {  
-  const searchToLower = beer.name.toLowerCase()
-
-  return searchToLower.includes(searchTerm)
-  
-  });
 
 
 //Functions to handle clicking the Nav words
@@ -52,21 +41,31 @@ const handleClassicRange = () => {
 //Not working yet
 const handleAcidic= () => {
 
-setLink("https://api.punkapi.com/v2/beers?filter=greaterThan('ph','6.0')?filter=not(equals(ph,'null'))")
-  }
+const acidicBeers = filteredBeers.filter(beer => beer.ph < 4)
+console.log(acidicBeers)
+
+return acidicBeers
+}
 
 const handleAllBeers = () => {
   setLink("https://api.punkapi.com/v2/beers?page=2&per_page=80")
 }
-
 
 //Getting search input, turning it to lower case and then setting Search Term as the lower case version.
 const handleInput = event => {
   const cleanInput = event.target.value.toLowerCase();
   setSearchTerm(cleanInput)
   
-
 }
+
+//Mapping over punk to get the beers to lowercase to match with search term below.
+const filteredBeers = punk.filter(beer => {  
+  const searchToLower = beer.name.toLowerCase()
+
+  return searchToLower.includes(searchTerm)
+  
+  });
+  
 //What we are showing on the page
 return (
 

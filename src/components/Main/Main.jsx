@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Main.scss"
 import BeerCard from "../BeerCard/BeerCard"
-import logo from "../../assets/images/brewDogLogo.png"
 import logoWhite from "../../assets/images/brewDogWhite.png"
 
   const Main = (props) => {
@@ -9,7 +8,7 @@ import logoWhite from "../../assets/images/brewDogWhite.png"
     return (
     
       <main>
-        <img className="brewDogLogo"src={logoWhite}/>
+        <img className="brewDogLogo"src={logoWhite} alt="brewDogLogo"/>
         <section className="beerCards">
           <BeerCard beersArr={beersArr}/>
         </section>
