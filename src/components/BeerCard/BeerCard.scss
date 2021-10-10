@@ -25,7 +25,7 @@
 }
 
 
-f
+
 .beer-tile {
   width: 300px;
   margin-bottom: 20px;
@@ -136,7 +136,9 @@ f
       }  
       
   }
-  
+  .beer-tile__description {
+    padding: 15px;
+  }
   
   .beer-tile {
     width: 300px;
@@ -180,7 +182,7 @@ f
       align-self: center;
       font-family:$font-header-solid;
       text-decoration: underline;
-      margin-bottom: 10px;
+      margin-bottom: 0px;
       margin-top: 0px;
       font-size: 20px;
       letter-spacing: 2px;
@@ -199,7 +201,7 @@ f
       font-family:$font-header-solid;
       margin-left: 10px;
       margin-right: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 0px;
       margin-top: 5px;
       font-size: 22px;
     

@@ -2,12 +2,12 @@ import React, {useState, useEffect} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  useLocation,
   Route
 } from "react-router-dom";
 
 import './App.scss';
 import data from "../src/data/beers"
+import BeerInfo from './containers/BeerInfo/BeerInfo';
 
 import Nav from "../src/components/Nav/Nav"
 import Main from './components/Main/Main';
@@ -18,7 +18,7 @@ import Main from './components/Main/Main';
 const App = () => {
   
 
-const [link, setLink] = useState("?page=2&per_page=80")
+const [link, setLink] = useState("?page=1&per_page=80")
 const [searchTerm, setSearchTerm] = useState("")
 const [punk, setPunk] = useState([])
 const [acidic, setAcidic] =useState([])
@@ -61,19 +61,24 @@ useEffect(() => {
 //Functions to handle clicking the Nav words
 const handleAllBeers = () => {
   setLink("?page=2&per_page=80")
+  
 }
 
 const handleHighABV = () => {
- setLink("?abv_gt=6")
+  setLink("?page=2&per_page=80")
+ 
+
 }
 
 const handleClassicRange = () => {
-  setLink("?brewed_before=01-2010")
+  setLink("?page=2&per_page=80")
+  
   
 }
 //Not working yet
 const handleAcidic= () => {
-
+  setLink("?page=2&per_page=80")
+  
 
 }
 
@@ -83,6 +88,7 @@ const handleAcidic= () => {
 const handleInput = event => {
   const cleanInput = event.target.value.toLowerCase();
   setSearchTerm(cleanInput)
+  
 }
 
 //Mapping over punk to get the beers to lowercase to match with search term below.
@@ -95,9 +101,7 @@ const handleInput = event => {
   });
 
 const acidicBeers = acidic.filter(beer => {
-  
   const acidicBeer = beer.ph < 4
-
   return acidicBeer
 })
   
@@ -118,6 +122,9 @@ return (
       </Route>
       <Route path="/highABV">
         <Main beersArr={highABV} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
+      </Route>
+      <Route path="/beer/:beerId">
+        <BeerInfo beersArr={acidic}/>
       </Route>
       <Route path="/">
         <Main beersArr={filteredBeers} placeholder="Search" searchTerm={searchTerm} handleInput={handleInput} />
