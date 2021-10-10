@@ -55,7 +55,6 @@ useEffect(() => {
     getAcidic()   
     getHighABV()
     getClassicRange()
-    setTimeout(function(){}, 3000);
     },[link])
 
 
@@ -74,7 +73,7 @@ const handleClassicRange = () => {
 }
 //Not working yet
 const handleAcidic= () => {
- console.log(acidicBeers)
+
 
 }
 

@@ -11,8 +11,8 @@ function BeerFilter(props) {
   return (
     <>
       <Link to="/"><SeeAllBeers handleAllBeersClick={handleAllBeersClick} /></Link>
-      <Link to="/"><HighABV handleHighABVClick={handleHighABVClick} /></Link>
-      <Link to="/"><ClassicRange handleClassicRangeClick={handleClassicRangeClick}/></Link>
+      <Link to="/highABV"><HighABV handleHighABVClick={handleHighABVClick} /></Link>
+      <Link to="/classicRange"><ClassicRange handleClassicRangeClick={handleClassicRangeClick}/></Link>
       <Link to="/acidic"><Acidic handleAcidicClick={handleAcidicClick}/></Link>
     </>
   )

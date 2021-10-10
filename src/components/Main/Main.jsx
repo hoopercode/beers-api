@@ -9,8 +9,10 @@ import SearchBar from '../SearchBar/SearchBar';
     return (
     
       <main>
+        <div>
         <img className="brewDogLogo"src={logoWhite} alt="brewDogLogo"/>
         <SearchBar placeholder={placeholder} searchTerm={searchTerm} handleInput={handleInput}/>
+        </div>
         <section className="beerCards">
           <BeerCard beersArr={beersArr}/>
         </section>
