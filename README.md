@@ -1,4 +1,4 @@
-![alt text](https://github.com/hoopercode/beers-api/blob/main/assets/images/PunkApiExample.png?raw=true)
+![alt text](https://github.com/hoopercode/beers-api/blob/main/src/assets/images/PunkApiExample.png?raw=true)
 
 # Nology Project - Punk Beer API
 
