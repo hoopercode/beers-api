@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+![alt text](https://github.com/hoopercode/beers-api/blob/main/assets/images/PunkApiExample.png?raw=true)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nology Project - Punk Beer API
 
-## Available Scripts
+This has been a project allocated to me during my 12 Week Nology Course
 
-In the project directory, you can run:
+## Brief
 
-### `npm start`
+"Your task is to build a website using React based on the specifications outline below. This will 
+be based on the Punk API which contains all the data you will need for the task (there is also a 
+link to a data file which we recommend you use before diving straight into using the API). 
+Please refer to Earworm as well as the sandbox apps we built together during the module!"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### My Learning
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+- APIs:  This was probably the purpose of the entire task. Being able to access, manipulate and use an API to present data.  I loved this part of the project.  It was really cool being able to see the different ways that you could change your API link to get different results.  From what I can tell, API's can vary quite differently from API to API in regards to what you can add to the end of them.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Props:  These are properties that we pass down to the APP.jsx that essentially carry data that is going to be used at a later point.  We generally keep the names the same as we pass them through different components.  Prop drilling is when you have to go through multiple levels of components.
 
-### `npm run build`
+- State:  This is how we change how a component or certain thing is behaving on our page.  We use useState to set a default state for an element and then we are able to change it using the setState.  This is a much cleaner way of changing the content/appearance/behavior of an element compared to vanilla JS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Routing/Linking  This is how we make the page appear as if it is going somewhere else.  It is a great way of re-using some of our components with different data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Things I found difficult
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Params:  This is still something that we are learning about and I didn't manage to get it working.
 
-### `npm run eject`
+### Looking Forward
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Params:  Continue learning about this
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- BEM:  Continue making sure I am careful with my naming of html elements.  I get slack with this.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Branching:  Still not good at this, I think setting up branches at the beginning of a project would be helpful.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Mixins:  I am still using full CSS for media queries.  I need to go away and learn about mixins.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
