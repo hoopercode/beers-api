@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.9f0c5640.chunk.css",
-    "main.js": "/static/js/main.db38a856.chunk.js",
-    "main.js.map": "/static/js/main.db38a856.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.545e7956.js",
-    "runtime-main.js.map": "/static/js/runtime-main.545e7956.js.map",
-    "static/js/2.add6c4e1.chunk.js": "/static/js/2.add6c4e1.chunk.js",
-    "static/js/2.add6c4e1.chunk.js.map": "/static/js/2.add6c4e1.chunk.js.map",
-    "static/js/3.82728b9f.chunk.js": "/static/js/3.82728b9f.chunk.js",
-    "static/js/3.82728b9f.chunk.js.map": "/static/js/3.82728b9f.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.9f0c5640.chunk.css.map": "/static/css/main.9f0c5640.chunk.css.map",
-    "static/js/2.add6c4e1.chunk.js.LICENSE.txt": "/static/js/2.add6c4e1.chunk.js.LICENSE.txt",
-    "static/media/Main.scss": "/static/media/alexandre-brondino-thFMGJ5uWVo-unsplash (1).c08fb7a7.jpg",
-    "static/media/brewDogWhite.11452bf1.png": "/static/media/brewDogWhite.11452bf1.png"
+    "main.css": "/beers-api/static/css/main.5922299e.chunk.css",
+    "main.js": "/beers-api/static/js/main.db38a856.chunk.js",
+    "main.js.map": "/beers-api/static/js/main.db38a856.chunk.js.map",
+    "runtime-main.js": "/beers-api/static/js/runtime-main.633daa5d.js",
+    "runtime-main.js.map": "/beers-api/static/js/runtime-main.633daa5d.js.map",
+    "static/js/2.add6c4e1.chunk.js": "/beers-api/static/js/2.add6c4e1.chunk.js",
+    "static/js/2.add6c4e1.chunk.js.map": "/beers-api/static/js/2.add6c4e1.chunk.js.map",
+    "static/js/3.82728b9f.chunk.js": "/beers-api/static/js/3.82728b9f.chunk.js",
+    "static/js/3.82728b9f.chunk.js.map": "/beers-api/static/js/3.82728b9f.chunk.js.map",
+    "index.html": "/beers-api/index.html",
+    "static/css/main.5922299e.chunk.css.map": "/beers-api/static/css/main.5922299e.chunk.css.map",
+    "static/js/2.add6c4e1.chunk.js.LICENSE.txt": "/beers-api/static/js/2.add6c4e1.chunk.js.LICENSE.txt",
+    "static/media/Main.scss": "/beers-api/static/media/alexandre-brondino-thFMGJ5uWVo-unsplash (1).c08fb7a7.jpg",
+    "static/media/brewDogWhite.11452bf1.png": "/beers-api/static/media/brewDogWhite.11452bf1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.545e7956.js",
+    "static/js/runtime-main.633daa5d.js",
     "static/js/2.add6c4e1.chunk.js",
-    "static/css/main.9f0c5640.chunk.css",
+    "static/css/main.5922299e.chunk.css",
     "static/js/main.db38a856.chunk.js"
   ]
 }
