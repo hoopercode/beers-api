@@ -1,6 +1,6 @@
 {
   "name": "beers-api.",
-  "home":"http://hoopercode.github.io/beers-api",
+  "homepage":"http://hoopercode.github.io/beers-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
