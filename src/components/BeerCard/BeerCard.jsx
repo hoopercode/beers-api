@@ -37,7 +37,6 @@ const BeerCard = (props) => {
           <h5 className="beer-tile__description">{(description) ? descriptionShorten(description) : noInfo} </h5>
           <h4 className="beer-tile__heading">Drink this beer with...</h4>
           <h5 className="beer-tile__description">{food_pairing}</h5>
-          <Link to={`/beer/${id}`}key={name + (index + 1)}> <button>Click to know more</button></Link>
           </div>
           </div>
         </div>

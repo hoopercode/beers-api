@@ -34,7 +34,7 @@ useEffect(() => {
        }
 
   const getAcidic = () => {//This function gets all Punk Beers
-        fetch(`https://api.punkapi.com/v2/beers?page=1&per_page=80`)
+        fetch(`https://api.punkapi.com/v2/beers?page=2&per_page=80`)
           .then((response) => response.json())
           .then((response) => {setAcidic(response)});
             }
@@ -99,7 +99,7 @@ const handleInput = event => {
   return searchToLower.includes(searchTerm)
   
   });
-
+//Finding Acidic Beers
 const acidicBeers = acidic.filter(beer => {
   const acidicBeer = beer.ph < 4
   return acidicBeer
